@@ -56,7 +56,6 @@
   background: var(--skillspage-bg);
   padding: 2rem;
   border-radius: var(--skillspage-radius);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   transition: transform var(--skillspage-transition);
 }
 
@@ -84,7 +83,7 @@
   align-items: center;
   padding: 0.8rem;
   border-radius: var(--skillspage-radius);
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(255, 255, 255, 0.03);
   transition: all var(--skillspage-transition);
 }
 

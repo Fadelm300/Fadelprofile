@@ -5,7 +5,7 @@ import NavBar from './components/NavBar/NavBar.jsx';
 import About from './components/About/About.jsx';
 import Skills from './components/Skills/Skills.jsx';
 import MainContent from './components/MainContent/MainContent.jsx';
-
+import Projects from './components/Projects/Projects.jsx';
 function App() {
 
   return (
@@ -20,7 +20,9 @@ function App() {
       <section id="skills">
         <Skills />
       </section>
-      
+       <section id="projects">
+        <Projects />
+      </section>
     </>
   )
 }

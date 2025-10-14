@@ -1,0 +1,164 @@
+.projects-section {
+  padding: 50px 20px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.projects-section.animate {
+  transform: translateY(0);
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: var(--skillspage-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.75rem;
+}
+
+
+.projects-description {
+  font-size: 1.125rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%; 
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.05);
+}
+
+.project-name {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-name:hover {
+  color: #007bff;
+}
+
+.project-card a {
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .projects-title {
+    font-size: 1.75rem;
+  }
+  
+  .projects-description {
+    font-size: 0.9rem;
+  }
+
+  .projects-grid {
+    padding: 10px;
+  }
+
+  .project-image {
+    height: 360px; 
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .projects-title {
+    font-size: 2rem;
+  }
+
+  .projects-description {
+    font-size: 15px;
+  }
+
+  .projects-grid {
+    padding: 20px;
+  }
+
+  .project-image {
+    height: 360px; 
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projects-title {
+   font-size: 2rem;
+  }
+
+  .projects-description {
+    font-size: 1rem;
+  }
+
+  .projects-container {
+    padding: 0 20px;
+  }
+
+  .project-image {
+    height: 360px; 
+  }
+}
+
+@media (min-width: 1025px) {
+  .projects-title {
+    font-size: 2.5rem;
+  }
+
+  .projects-description {
+    font-size: 18px;
+  }
+
+  .projects-container {
+    max-width: 1200px;
+    padding: 0 40px;
+  }
+
+  .project-image {
+    height: 360px; 
+  }
+}
+
+
+ .projects-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.projects-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}

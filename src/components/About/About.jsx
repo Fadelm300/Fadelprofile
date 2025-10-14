@@ -4,7 +4,7 @@ import profileImg from "../../assets/ST3_4992 copy.jpg";
 import useScrollAnimation from "../useScrollAnimation/useScrollAnimation";
 const About = () => {
   const [ref, isVisible] = useScrollAnimation();
-  const greetingText = "Hi, I’m";
+  const greetingText = "Hello,";
   const letters = greetingText.split("").map((char, index) => (
     <span
       key={index}
@@ -21,7 +21,7 @@ const About = () => {
       >
       <div className="aboutpage-container">
         <div className="aboutpage-text-side">
-          <h2 className="aboutpage-greeting">{letters}</h2>
+          <h2 className="aboutpage-greeting">{letters}and welcome to my portfolio.</h2>
           <h1 className="aboutpage-name">Fadel M Moussa</h1>
           <p className="aboutpage-description">
             I’m a Software Engineer driven by passion, creativity, and
