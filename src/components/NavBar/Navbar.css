@@ -52,7 +52,7 @@
   box-shadow: 0 6px 18px rgba(10,12,40,0.35);
   transition: transform var(--transition), box-shadow var(--transition);
 }
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(10,12,40,0.45); }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(10,12,40,0.45);  }
 
 
 .btn-github,

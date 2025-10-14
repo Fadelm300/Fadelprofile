@@ -1,0 +1,218 @@
+:root {
+  --aboutpage-bg: #ffffff;
+  --aboutpage-text: #0f1724;
+  --aboutpage-accent: linear-gradient(90deg, #6a5cff, #00c6ff);
+  --aboutpage-radius: 12px;
+  --aboutpage-transition: 250ms cubic-bezier(.2, .9, .3, 1);
+  --aboutpage-muted: #9fb0c8;
+}
+
+.aboutpage-section {
+  background: var(--aboutpage-bg);
+  color: var(--aboutpage-text);
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutpage-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.aboutpage-text-side {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* ===== ANIMATED GREETING ===== */
+.aboutpage-greeting {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+
+.aboutpage-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: aboutpage-fall 2.5s ease-in-out infinite;
+}
+
+@keyframes aboutpage-fall {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.aboutpage-name {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  transition: transform var(--aboutpage-transition), text-shadow var(--aboutpage-transition);
+}
+
+.aboutpage-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+  max-width: 600px;
+}
+
+.aboutpage-btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  background: var(--aboutpage-accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 6px 18px rgba(10, 12, 40, 0.25);
+  transition: transform var(--aboutpage-transition), box-shadow var(--aboutpage-transition);
+  align-self: center; /* يجعل الزر في النص */
+  margin-top: 1.5rem;
+}
+
+.aboutpage-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(10, 12, 40, 0.35);
+}
+
+.aboutpage-image-side {
+  flex: 0 1 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutpage-profile-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform var(--aboutpage-transition), box-shadow var(--aboutpage-transition);
+}
+
+.aboutpage-profile-img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .aboutpage-container {
+    flex-direction: column;
+  }
+
+  .aboutpage-image-side {
+    order: -1;
+    margin-bottom: 1.5rem;
+  }
+
+  .aboutpage-text-side {
+    align-items: center;
+    text-align: center;
+  }
+
+  .aboutpage-greeting {
+    font-size: 1.4rem;
+  }
+
+  .aboutpage-name {
+    font-size: 1.8rem;
+  }
+
+  .aboutpage-description {
+    font-size: 0.95rem;
+  }
+
+  .aboutpage-profile-img {
+    width: 180px;
+    height: 180px;
+  }
+}
+@media (max-width: 480px) {
+  :root { --aboutpage-font: 14px; }
+  .aboutpage-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .aboutpage-image-side { order: -1; margin-bottom: 1.5rem; }
+  .aboutpage-profile-img { width: 180px; height: 180px; }
+  .aboutpage-name { font-size: 1.5rem; }
+  .aboutpage-description { font-size: 0.9rem; }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  :root { --aboutpage-font: 15px; }
+  .aboutpage-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .aboutpage-image-side { order: -1; margin-bottom: 1.5rem; }
+  .aboutpage-profile-img { width: 200px; height: 200px; }
+  .aboutpage-name { font-size: 1.8rem; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root { --aboutpage-font: 16px; }
+  .aboutpage-container { flex-direction: row; gap: 2rem; }
+  .aboutpage-name { font-size: 2rem; }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  :root { --aboutpage-font: 17px; }
+  .aboutpage-container { max-width: 1100px; }
+}
+
+@media (min-width: 1367px) {
+  :root { --aboutpage-font: 18px; }
+  .aboutpage-container { max-width: 1200px; }
+}
+@media (min-width: 769px) and (max-width: 814px) {
+  .aboutpage-container {
+    flex-wrap: nowrap; 
+    gap: 2rem;
+  }}
+
+
+
+
+
+
+  .aboutpage-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.aboutpage-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}

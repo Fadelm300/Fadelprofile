@@ -1,0 +1,106 @@
+
+.main-content {
+  background: #ffffff;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+
+.image {
+  flex: 1 1 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+.text-section {
+  flex: 2 1 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-section .title {
+  color: #0f1724;
+  font-weight: 700;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.text-section .title:hover {
+  transform: translateY(-3px);
+  text-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.text-section .description {
+  color: #0f1724;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  transition: transform 0.3s ease;
+}
+
+.text-section .description:hover {
+  transform: translateY(-2px);
+}
+
+.cta-button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #6a5cff, #00c6ff);
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 1024px) {
+  .text-section .title { font-size: 16px; }
+  .text-section .description { font-size: 16px; }
+}
+
+@media (max-width: 768px) {
+  .text-section .title { font-size: 15px; }
+  .text-section .description { font-size: 15px; }
+}
+
+@media (max-width: 480px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .text-section .title { font-size: 14px; }
+  .text-section .description { font-size: 14px; }
+  .text-section .cta-button { font-size: 14px; padding: 10px 25px; }
+}
