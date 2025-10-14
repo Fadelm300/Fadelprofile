@@ -1,19 +1,29 @@
-# React + Vite
+# Fadel  Moussa - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Portfolio
+Check out my full portfolio here: [My Portfolio](coming soon🔥😎 )
 
-Currently, two official plugins are available:
+## About Me
+Hi! I'm **Fadel  Moussa**, a Software Engineer driven by passion, creativity, and innovation.  
+I strive to craft impactful solutions that solve problems, inspire change, and contribute positively to the community.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔭 Currently working on web applications and enhancing my DevOps skills  
+- 🌱 Always learning new frameworks and technologies  
+- 💬 Ask me about React, Node.js, Cloud, and Front-End Development  
+- 🎨 Love creating interactive and modern designs  
 
-## React Compiler
+## Figma Designs
+Here are some of my UI/UX designs and prototypes:  
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+![Figma Design 1](./src/assets/figmaImg/1figma.png)  
+![Figma Design 2](./src/assets/figmaImg/2figma.png)
+![Figma Design 1](./src/assets/figmaImg/3figma.png) 
+![Figma Design 2](./src/assets/figmaImg/4figma.png)  
+*More designs available on my [Figma Profile](https://www.figma.com/design/hHjbFElldIFWtAuslGfeFu/Untitled?node-id=0-1&m=dev&t=iDzeRe1JNA0fGNpT-1)*
 
-Note: This will impact Vite dev & build performances.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Fadelprofile
+## Connect with Me
+- [LinkedIn](www.linkedin.com/in/fadel-mohammad-b70662151)  
+- [GitHub](https://github.com/Fadelm300)  
+- [Email](Fadel.m200@gmail.com)
