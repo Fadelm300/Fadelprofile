@@ -36,11 +36,11 @@ const NavBar = () => {
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact Me</a></li>
+            <li><a href="#contactme">Contact Me</a></li>
           </ul>
           <div className="cta">
                 <a
-                    href="https://github.com/username"
+                    href="https://github.com/Fadelm300"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary btn-github"
@@ -48,7 +48,7 @@ const NavBar = () => {
                     <img src="./src/assets/icons/github.png" alt="GitHub" className="btn-icon" />
                 </a>
                 <a
-                    href="https://www.linkedin.com/in/username/"
+                    href="https://www.linkedin.com/in/fadel-mohammad-b70662151"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary btn-linkedin"

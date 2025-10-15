@@ -27,7 +27,7 @@
 }
 
 .aboutpage-text-side {
-  flex: 1 1 500px;
+  flex: 1 1 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;

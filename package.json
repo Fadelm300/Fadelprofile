@@ -8,9 +8,10 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-     "start": "react-scripts start"
+    "start": "react-scripts start"
   },
   "dependencies": {
+    "@sendinblue/client": "^3.3.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },

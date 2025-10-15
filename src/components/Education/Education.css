@@ -1,0 +1,125 @@
+:root {
+  --edu-bg: #ffffff;
+  --edu-text: #0f1724;
+  --edu-accent: linear-gradient(90deg, #6a5cff, #00c6ff);
+  --edu-muted: #444;
+  --edu-radius: 12px;
+  --edu-transition: 250ms cubic-bezier(.2, .9, .3, 1);
+  --education-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.education-section {
+  background: var(--edu-bg);
+  color: var(--edu-text);
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.education-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: var(--edu-accent);  
+   -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;  
+  margin-bottom: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.education-title:hover {
+  transform: translateY(-5px);
+  text-shadow: 2px 2px 10px var(--education-shadow); /* إضافة تأثير الظل */
+}
+
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.education-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+}
+
+.education-logo {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.education-info h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: flex;
+  justify-content: center;
+
+}
+
+.education-info h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--edu-muted);
+  margin-bottom: 1rem;
+   display: flex;
+  justify-content: center;
+  
+}
+
+.education-info p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .education-logo {
+     width: 120px;
+    height: 120px;
+
+  }
+
+  .education-info h2 {
+    font-size: 1.1rem;
+  }
+
+  .education-info p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .education-card {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .education-info h2 {
+    font-size: 1.3rem;
+  }
+}
+.education-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.education-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}

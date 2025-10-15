@@ -37,7 +37,10 @@
   -webkit-text-fill-color: transparent;
   margin-bottom: 0.75rem;
 }
-
+.skillspage-title:hover {
+  transform: translateY(-5px);
+  text-shadow: 2px 2px 10px var(--skillspage-shadow);
+}
 .skillspage-subtitle {
   font-size: 1rem;
   color: var(--skillspage-text);
