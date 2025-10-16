@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "./ContactMe.css";
 import useScrollAnimation from "../useScrollAnimation/useScrollAnimation";
 import { sendContactMessage } from "../../controllers/contactController";
-
+import linkedinIcon from "../../assets/icons/linkedin.png";
+import githubIcon from "../../assets/icons/github.png";
+import communicationIcon from "../../assets/icons/communication.png";
 const ContactMe = () => {
   const [ref, animate] = useScrollAnimation();
   const [formData, setFormData] = useState({
@@ -121,15 +123,15 @@ const ContactMe = () => {
         <div className="contact-footer">
           <div className="social-links">
             <a href="mailto:youremail@example.com" className="social-link">
-              <img src="./src/assets/icons/communication.png" alt="Email" />
+              <img src={communicationIcon} alt="Email" />
               Email
             </a>
             <a href="https://linkedin.com/in/yourprofile" className="social-link">
-              <img src="./src/assets/icons/linkedin.png" alt="LinkedIn" />
+              <img src={linkedinIcon} alt="LinkedIn" />
               LinkedIn
             </a>
             <a href="https://github.com/yourusername" className="social-link">
-              <img src="./src/assets/icons/github.png" alt="GitHub" />
+              <img src={githubIcon} alt="GitHub" />
               GitHub
             </a>
           </div>

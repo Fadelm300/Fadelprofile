@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Navbar.css"; 
 import logoSrc from "../../assets/logo.png"; 
-
+import linkedinIcon from "../../assets/icons/linkedin.png";
+import githubIcon from "../../assets/icons/github.png"; 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
 
@@ -45,7 +46,7 @@ const NavBar = () => {
                     rel="noopener noreferrer"
                     className="btn-primary btn-github"
                 >
-                    <img src="./src/assets/icons/github.png" alt="GitHub" className="btn-icon" />
+                    <img src={githubIcon} alt="GitHub" className="btn-icon" />
                 </a>
                 <a
                     href="https://www.linkedin.com/in/fadel-mohammad-b70662151"
@@ -53,7 +54,7 @@ const NavBar = () => {
                     rel="noopener noreferrer"
                     className="btn-primary btn-linkedin"
                 >
-                    <img src="./src/assets/icons/linkedin.png" alt="LinkedIn" className="btn-icon" />
+                    <img src={linkedinIcon} alt="LinkedIn" className="btn-icon" />
                 </a>
                 </div>
 
