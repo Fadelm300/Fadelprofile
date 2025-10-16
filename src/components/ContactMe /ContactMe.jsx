@@ -121,7 +121,7 @@ const ContactMe = () => {
         <div className="contact-footer">
           <div className="social-links">
             <a href="mailto:youremail@example.com" className="social-link">
-              <img src="./src/assets/icons/gmail.png" alt="Email" />
+              <img src="./src/assets/icons/communication.png" alt="Email" />
               Email
             </a>
             <a href="https://linkedin.com/in/yourprofile" className="social-link">
