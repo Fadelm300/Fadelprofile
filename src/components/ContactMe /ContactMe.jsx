@@ -122,15 +122,15 @@ const ContactMe = () => {
 
         <div className="contact-footer">
           <div className="social-links">
-            <a href="mailto:youremail@example.com" className="social-link">
+            <a href="mailto:fadel.m200@gmail.com" className="social-link">
               <img src={communicationIcon} alt="Email" />
               Email
             </a>
-            <a href="https://linkedin.com/in/yourprofile" className="social-link">
+            <a href="https://www.linkedin.com/in/fadel-mohammad-b70662151" className="social-link">
               <img src={linkedinIcon} alt="LinkedIn" />
               LinkedIn
             </a>
-            <a href="https://github.com/yourusername" className="social-link">
+            <a href="https://github.com/Fadelm300 className="social-link">
               <img src={githubIcon} alt="GitHub" />
               GitHub
             </a>
