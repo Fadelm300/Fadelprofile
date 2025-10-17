@@ -122,7 +122,7 @@ const ContactMe = () => {
 
         <div className="contact-footer">
           <div className="social-links">
-            <a href="mailto:youremail@example.com" className="social-link">
+            <a href="mailto:fadel.m200@gmail.com" className="social-link">
               <img src={communicationIcon} alt="Email" />
               Email
             </a>
