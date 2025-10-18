@@ -17,7 +17,7 @@ const Projects = () => {
     { name: "Quiz App", img: quizAppImg, link: "https://github.com/HaroonAlnhdi/Quizz_App" },
     { name: "Card Match", img: cardMatchImg, link: "https://github.com/Fadelm300/Memory_cards_Game" },
     { name: "XO AI", img: xoaiImg, link: "https://github.com/Fadelm300/tic-tac-toe" },
-   { name: "Pharmacy", img: pharmacyImg, link: "https://github.com/Fadelm300/pharmacy" }
+   { name: "Pharmacy", img: pharmacyImg, link: "https://github.com/Fadelm300/pharmacy_489" }
   ];
 
   return (
