@@ -43,8 +43,7 @@ const Education = () => {
               Successfully completed all graduation requirements for the Bachelor
               of Science in Computer Science program, gaining a solid foundation in
               core computing concepts, programming, algorithms, data structures,
-              and software development principles. Certificate pending official
-              endorsement by the University Council.
+              and software development principles. 
             </p>
           </div>
         </div>
