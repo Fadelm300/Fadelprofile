@@ -18,7 +18,7 @@ const ContactMe = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(`🟢 Field Changed → ${name}:`, value);
+    // console.log(`🟢 Field Changed → ${name}:`, value);
     setFormData({ ...formData, [name]: value });
   };
 

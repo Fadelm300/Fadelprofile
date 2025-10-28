@@ -6,7 +6,7 @@ export const sendContactMessage = async (data) => {
   // console.log("🌐 BACKEND_URL is:", BACKEND_URL);
 
   try {
-    const res = await fetch(`${BACKEND_URL}/api/contact`, {
+    const res = await fetch(`${BACKEND_URL}/contact`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
