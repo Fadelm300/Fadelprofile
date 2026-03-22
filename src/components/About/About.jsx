@@ -31,7 +31,7 @@ const About = () => {
             continuous growth, and purposeful development.
           </p>
 
-          <a href="https://drive.google.com/file/d/1oHd05kznk_5NU9M_rvWSL-ZQN0sFl-uJ/view?usp=sharing" className="aboutpage-btn">
+          <a href="https://drive.google.com/file/d/1PWHtdwEsKhX9R6t41EFBNjm5gFFkaLE3/view?usp=sharing" className="aboutpage-btn">
             Check Resume
           </a>
         </div>
