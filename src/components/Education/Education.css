@@ -1,125 +1,207 @@
-:root {
-  --edu-bg: #ffffff;
-  --edu-text: #0f1724;
-  --edu-accent: linear-gradient(90deg, #6a5cff, #00c6ff);
-  --edu-muted: #444;
-  --edu-radius: 12px;
-  --edu-transition: 250ms cubic-bezier(.2, .9, .3, 1);
-  --education-shadow: rgba(0, 0, 0, 0.1);
-}
 
-.education-section {
-  background: var(--edu-bg);
-  color: var(--edu-text);
-  padding: 4rem 1rem;
+.edu-section {
+  background: #FAF8F3;
+  padding: 5.5rem 2.5rem 9rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.education-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  background: var(--edu-accent);  
-   -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent;  
-  margin-bottom: 2.5rem;
-  transition: all 0.3s ease;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
 }
 
-.education-title:hover {
-  transform: translateY(-5px);
-  text-shadow: 2px 2px 10px var(--education-shadow); /* إضافة تأثير الظل */
-}
-
-
-.education-container {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
+.edu-section::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
   width: 100%;
-  max-width: 1000px;
+  height: 90px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 90' preserveAspectRatio='none'%3E%3Cpath d='M0,60 C360,10 720,80 1080,30 C1260,10 1380,55 1440,40 L1440,90 L0,90 Z' fill='%23ffffff'/%3E%3C/svg%3E")
+    no-repeat center bottom / 100% 100%;
+  pointer-events: none;
+  z-index: 1;
 }
 
-.education-card {
+.edu-inner {
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+
+.edu-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity  0.7s cubic-bezier(0.2, 0.9, 0.3, 1) var(--d, 0ms),
+    transform 0.7s cubic-bezier(0.2, 0.9, 0.3, 1) var(--d, 0ms);
+}
+
+.edu-reveal.edu-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.edu-header .edu-reveal          { transform: translateX(-28px); }
+.edu-header .edu-reveal.edu-visible { transform: translateX(0); }
+
+.edu-header { margin-bottom: 5rem; }
+
+.edu-label {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9a8f82;
+  margin-bottom: 1.25rem;
+}
+
+.edu-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.06;
+  color: #1a1410;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.edu-subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #7a6f65;
+  max-width: 480px;
+  margin: 0;
+}
+
+.edu-list { display: flex; flex-direction: column; }
+
+.edu-entry {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 3.5rem;
+  padding: 3.5rem 0;
+  border-top: 1px solid #e5ddd3;
+  align-items: start;
+}
+
+.edu-entry:last-child { border-bottom: 1px solid #e5ddd3; }
+
+.edu-logo-wrap {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  text-align: left;
+  justify-content: flex-start;
+  padding-top: 4px;
 }
 
-.education-logo {
-  width: 160px;
-  height: 160px;
+.edu-logo {
+  width: 150px;
+  height: 150px;
   object-fit: contain;
-  transition: transform 0.3s ease;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  filter: grayscale(20%);
 }
 
-.education-info h2 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
+.edu-entry:hover .edu-logo {
+  opacity: 1;
+  transform: scale(1.04);
+  filter: grayscale(0%);
+}
+
+.edu-content { display: flex; flex-direction: column; }
+
+.edu-meta {
   display: flex;
-  justify-content: center;
-
+  align-items: baseline;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
 }
 
-.education-info h3 {
-  font-size: 1rem;
+.edu-school {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
   font-weight: 500;
-  color: var(--edu-muted);
-  margin-bottom: 1rem;
-   display: flex;
-  justify-content: center;
-  
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9a8f82;
 }
 
-.education-info p {
+.edu-period {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #b5a898;
+}
+
+.edu-degree {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #1a1410;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.edu-body {
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.95rem;
-  line-height: 1.6;
-  color: #333;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #5a5048;
+  margin: 0;
+  max-width: 640px;
 }
 
-@media (max-width: 768px) {
-  .education-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+@media (max-width: 860px) {
+.edu-section {
+  padding: 4.5rem 2rem 8rem;
+}
+
+  .edu-section::after { height: 65px; }
+
+  .edu-entry {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 2.75rem 0;
   }
 
-  .education-logo {
-     width: 120px;
-    height: 120px;
+  .edu-logo-wrap { justify-content: flex-start; padding-top: 0; }
+  .edu-logo { width: 130px; height: 130px; }
+}
 
+@media (max-width: 600px) {
+  .edu-section {
+  padding: 3.75rem 1.25rem 7rem;
   }
 
-  .education-info h2 {
-    font-size: 1.1rem;
+  .edu-section::after {
+    height: 42px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 48' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C120,10 255,40 390,22 L390,48 L0,48 Z' fill='%23ffffff'/%3E%3C/svg%3E")
+      no-repeat center bottom / 100% 100%;
   }
 
-  .education-info p {
+  .edu-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .edu-entry {
+    padding: 2.25rem 0;
+  }
+
+  .edu-body {
     font-size: 0.9rem;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-  .education-card {
-    gap: 1.5rem;
-  }
-}
-
-@media (min-width: 1025px) {
-  .education-info h2 {
-    font-size: 1.3rem;
-  }
-}
-.education-section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s ease-out;
-}
-
-.education-section.animate {
-  opacity: 1;
-  transform: translateY(0);
+@media (prefers-reduced-motion: reduce) {
+  .edu-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .edu-logo   { transition: none !important; }
 }

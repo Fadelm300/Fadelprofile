@@ -16,20 +16,17 @@ body {
   margin: 0;
   padding: 0;
 }
-/* .main-APP {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(110vh - 80px); 
-  flex-direction: column;
 
-} */
-
-/* * {
-  outline: 1px solid red;
-} */
 
 html {
   scroll-behavior: smooth;
 }
 
+#about,
+#skills,
+#projects,
+#education,
+#contactme {
+  scroll-margin-top: 90px;
+  overflow: visible;
+}

@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Projects.css";
-import useScrollAnimation from "../useScrollAnimation/useScrollAnimation";
 import pharmacyImg from "../../assets/Projectsimg/pharmacy.png";
 import uniclubImg from "../../assets/Projectsimg/uni1.png";
 import quizAppImg from "../../assets/Projectsimg/quizapp.png";
@@ -10,79 +9,144 @@ import cardMatchImg from "../../assets/Projectsimg/cardmatch.png";
 import EmployeeManagementSystem from "../../assets/Projectsimg/EM_img.png";
 import insightBoardImg from "../../assets/Projectsimg/insightboard.png";
 
-const Projects = () => {
-  const [ref, isVisible] = useScrollAnimation();
+const projects = [
+  {
+    name: "UniClub",
+    img: uniclubImg,
+    link: "https://github.com/Fadelm300/UniClub-frontend",
+  },
+  {
+    name: "Employee Management System",
+    img: EmployeeManagementSystem,
+    link: "https://github.com/Fadelm300/EmployeeManagementSystem-frontend",
+  },
+  {
+    name: "InsightBoard",
+    img: insightBoardImg,
+    link: "https://github.com/Fadelm300/insightboard",
+  },
+  {
+    name: "Quiz App",
+    img: quizAppImg,
+    link: "https://github.com/HaroonAlnhdi/Quizz_App",
+  },
+  {
+    name: "Blog",
+    img: carsBlog,
+    link: "https://github.com/Fadelm300/Car-Blogs",
+  },
+  {
+    name: "Card Match",
+    img: cardMatchImg,
+    link: "https://github.com/Fadelm300/Memory_cards_Game",
+  },
+  {
+    name: "XO AI",
+    img: xoaiImg,
+    link: "https://github.com/Fadelm300/tic-tac-toe",
+  },
+  {
+    name: "Pharmacy",
+    img: pharmacyImg,
+    link: "https://github.com/Fadelm300/pharmacy_489",
+  },
+];
 
-  const projects = [
-    {
-      name: "UniClub",
-      img: uniclubImg,
-      link: "https://github.com/Fadelm300/UniClub-frontend",
-    },
-    {
-      name: "Employee Management System",
-      img: EmployeeManagementSystem,
-      link: "https://github.com/Fadelm300/EmployeeManagementSystem-frontend",
-    },
-    {
-      name: "InsightBoard",
-      img: insightBoardImg,
-      link: "https://github.com/Fadelm300/insightboard",
-    },
-    {
-      name: "Blog",
-      img: carsBlog,
-      link: "https://github.com/Fadelm300/Car-Blogs",
-    },
-    {
-      name: "Quiz App",
-      img: quizAppImg,
-      link: "https://github.com/HaroonAlnhdi/Quizz_App",
-    },
-    {
-      name: "Card Match",
-      img: cardMatchImg,
-      link: "https://github.com/Fadelm300/Memory_cards_Game",
-    },
-    {
-      name: "XO AI",
-      img: xoaiImg,
-      link: "https://github.com/Fadelm300/tic-tac-toe",
-    },
-    {
-      name: "Pharmacy",
-      img: pharmacyImg,
-      link: "https://github.com/Fadelm300/pharmacy_489",
-    },
-  ];
+const Projects = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (prefersReduced) {
+      sectionRef.current
+        ?.querySelectorAll(".prj-reveal")
+        .forEach((el) => el.classList.add("prj-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("prj-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08 }
+    );
+
+    sectionRef.current
+      ?.querySelectorAll(".prj-reveal")
+      .forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section
-      ref={ref}
-      className={`projects-section${isVisible ? " animate" : ""}`}
-    >
-      <div className="projects-container">
-        <h2 className="projects-title">Projects</h2>
+    <section className="prj-section" ref={sectionRef}>
+      <div className="prj-inner">
 
-        <p className="projects-description">
-          I have worked on a wide range of projects, from web apps to Android apps.
-          Here are some of my latest projects.
-        </p>
+        {/* Header */}
+        <div className="prj-header">
+          <span
+            className="prj-reveal prj-label"
+            style={{ "--d": "0ms" }}
+          >
+            Work
+          </span>
+          <h1
+            className="prj-reveal prj-title"
+            style={{ "--d": "80ms" }}
+          >
+            Projects
+          </h1>
+          <p
+            className="prj-reveal prj-subtitle"
+            style={{ "--d": "160ms" }}
+          >
+            A selection of web apps and tools I have built  from full-stack
+            platforms to interactive games.
+          </p>
+        </div>
 
-        <div className="projects-grid">
-          {projects.map((project, index) => (
-            <div key={index} className="project-card">
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
+        {/* Grid */}
+        <div className="prj-grid">
+          {projects.map((project, i) => (
+            <a
+              key={i}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="prj-reveal prj-card"
+              style={{ "--d": `${200 + i * 70}ms` }}
+              aria-label={`View ${project.name} on GitHub`}
+            >
+              {/* Portrait image */}
+              <div className="prj-img-wrap">
                 <img
                   src={project.img}
                   alt={project.name}
-                  className="project-image"
+                  className="prj-img"
                 />
-                <span className="project-name">{project.name}</span>
-              </a>
-            </div>
+                {/* Hover overlay */}
+                <div className="prj-overlay" aria-hidden="true">
+                  <span className="prj-cta">View on GitHub →</span>
+                </div>
+              </div>
+
+              {/* Footer */}
+              <div className="prj-footer">
+                <span className="prj-name">{project.name}</span>
+                <span className="prj-icon" aria-hidden="true">↗</span>
+              </div>
+            </a>
           ))}
         </div>
+
       </div>
     </section>
   );

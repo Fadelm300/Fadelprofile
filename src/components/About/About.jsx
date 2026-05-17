@@ -1,48 +1,130 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./About.css";
-import profileImg from "../../assets/ST3_4992 copy.jpg"; 
-import useScrollAnimation from "../useScrollAnimation/useScrollAnimation";
+import rightImage from "../../assets/ST3_4992 copy.jpg";
+
 const About = () => {
-  const [ref, isVisible] = useScrollAnimation();
-  const greetingText = "Hello,";
-  const letters = greetingText.split("").map((char, index) => (
-    <span
-      key={index}
-      className="aboutpage-letter"
-      style={{ animationDelay: `${index * 0.1}s` }}
-    >
-      {char}
-    </span>
-  ));
+  const sectionRef = useRef(null);
+
+  // Mount-based reveal (hero is visible on load, no scroll needed)
+  useEffect(() => {
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (prefersReduced) {
+      sectionRef.current
+        ?.querySelectorAll(".mc-reveal")
+        .forEach((el) => el.classList.add("mc-visible"));
+      return;
+    }
+
+    // Small delay so browser has painted before animating
+    const timer = setTimeout(() => {
+      sectionRef.current
+        ?.querySelectorAll(".mc-reveal")
+        .forEach((el) => el.classList.add("mc-visible"));
+    }, 80);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <section ref={ref} 
-      className={`aboutpage-section ${isVisible ? "animate" : ""}`}
-      >
-      <div className="aboutpage-container">
-        <div className="aboutpage-text-side">
-          <h2 className="aboutpage-greeting">{letters}and welcome to my portfolio.</h2>
-          <h1 className="aboutpage-name">Fadel  Moussa</h1>
-          <p className="aboutpage-description">
-            I’m a Software Engineer driven by passion, creativity, and
-            innovation. I strive to craft impactful solutions that solve
-            problems, inspire change, and contribute positively to the
-            community, turning ideas into reality through thoughtful design,
-            continuous growth, and purposeful development.
+    <section className="mc-section" ref={sectionRef}>
+      <div className="mc-inner">
+
+        {/* ── Left — Text ── */}
+        <div className="mc-left">
+          <span
+            className="mc-reveal mc-greeting"
+            style={{ "--d": "0ms" }}
+          >
+            Hello, I'm
+          </span>
+
+          <h1
+            className="mc-reveal mc-name"
+            style={{ "--d": "100ms" }}
+          >
+            Fadel<br />
+            <em>M. Moussa</em>
+          </h1>
+
+          <p
+            className="mc-reveal mc-desc"
+            style={{ "--d": "220ms" }}
+          >
+            A Software Engineer driven by passion, creativity, and
+            innovation. I craft impactful solutions that solve real
+            problems, inspire change, and contribute positively to
+            the community  turning ideas into reality through
+            thoughtful design and purposeful development.
           </p>
 
-          <a href="https://drive.google.com/file/d/1PWHtdwEsKhX9R6t41EFBNjm5gFFkaLE3/view?usp=sharing" className="aboutpage-btn">
-            Check Resume
-          </a>
+          <div
+            className="mc-reveal mc-actions"
+            style={{ "--d": "360ms" }}
+          >
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mc-btn-primary"
+            >
+              <span className="mc-btn-label">Check Resume</span>
+              <span className="mc-btn-arrow" aria-hidden="true">→</span>
+            </a>
+
+            <a href="#contactme" className="mc-btn-ghost">
+              Get in touch ↗
+            </a>
+          </div>
+
+          {/* Subtle stat row */}
+          <div
+            className="mc-reveal mc-stats"
+            style={{ "--d": "480ms" }}
+          >
+            <div className="mc-stat">
+              <span className="mc-stat-num">8+</span>
+              <span className="mc-stat-label">Projects built</span>
+            </div>
+            <div className="mc-stat-divider" aria-hidden="true" />
+            <div className="mc-stat">
+              <span className="mc-stat-num">420h</span>
+              <span className="mc-stat-label">Bootcamp training</span>
+            </div>
+            <div className="mc-stat-divider" aria-hidden="true" />
+            <div className="mc-stat">
+              <span className="mc-stat-num">Full</span>
+              <span className="mc-stat-label">Stack ready</span>
+            </div>
+          </div>
         </div>
 
-        <div className="aboutpage-image-side">
-          <img
-            src={profileImg}
-            alt="Profile"
-            className="aboutpage-profile-img"
-          />
-        </div>
+        {/* ── Right — Photo ── */}
+          <div
+            className="mc-reveal mc-right"
+            style={{ "--d": "180ms" }}
+          >
+            <div className="mc-img-frame">
+              <img
+                src={rightImage}
+                alt="Fadel M. Moussa"
+                className="mc-img"
+              />
+
+              <div className="mc-badge" aria-hidden="true">
+                <span className="mc-badge-dot" />
+                Available for work
+              </div>
+            </div>
+          </div>
+      </div>
+
+      {/* Scroll hint */}
+      <div className="mc-reveal mc-scroll-hint" style={{ "--d": "700ms" }}>
+        <span className="mc-scroll-line" aria-hidden="true" />
+        <span>Scroll</span>
       </div>
     </section>
   );
