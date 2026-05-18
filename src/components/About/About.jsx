@@ -65,7 +65,7 @@ const About = () => {
             style={{ "--d": "360ms" }}
           >
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1nE9x3AcTlV0-Uv9EjT3JFH6ga9IB07wy/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="mc-btn-primary"
