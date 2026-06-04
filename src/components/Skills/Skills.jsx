@@ -32,7 +32,7 @@ import ubuntu from "../../assets/skillsIcons/ubuntu.png";
 import linux from "../../assets/skillsIcons/linux.png";
 import vscode from "../../assets/skillsIcons/vscode.png";
 import androidstudio from "../../assets/skillsIcons/androidstudio.png";
-
+import typescript from "../../assets/skillsIcons/typescript.png";
 const skillCategories = [
   {
     title: "Front-End Development",
@@ -40,6 +40,7 @@ const skillCategories = [
     skills: [
       { name: "React.js",   img: react },
       { name: "JavaScript", img: js },
+      { name: "TypeScript", img: typescript },
       { name: "Next.js",    img: nextjs },
       { name: "Angular.js", img: angular },
       { name: "HTML",       img: html },
@@ -54,9 +55,9 @@ const skillCategories = [
     description: "APIs, server logic, and data management",
     skills: [
       { name: "Node.js",    img: node },
+      { name: "Express.js", img: express },
       { name: "PHP",        img: php },
       { name: "Python",     img: python },
-      { name: "Express.js", img: express },
       { name: "Django",     img: django },
       { name: "Flask",      img: flask },
     ],
