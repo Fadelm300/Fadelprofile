@@ -42,7 +42,7 @@ const skillCategories = [
       { name: "JavaScript", img: js },
       { name: "TypeScript", img: typescript },
       { name: "Next.js",    img: nextjs },
-      { name: "Angular.js", img: angular },
+      { name: "Angular", img: angular },
       { name: "HTML",       img: html },
       { name: "Flutter",    img: flutter },
       { name: "CSS",        img: css },
