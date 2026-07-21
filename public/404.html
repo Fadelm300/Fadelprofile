@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, follow" />
+  <title>Page Not Found | Fadel Moussa</title>
+  <style>
+    @font-face{font-family:"DM Sans";src:url("/fonts/dm-sans-400.woff2") format("woff2");font-display:swap}
+    @font-face{font-family:"DM Sans";src:url("/fonts/dm-sans-500.woff2") format("woff2");font-weight:500;font-display:swap}
+    @font-face{font-family:"DM Serif Display";src:url("/fonts/dm-serif-400.woff2") format("woff2");font-display:swap}
+    *{box-sizing:border-box}
+    body{margin:0;background:#fbfbfa;color:#101827;font-family:"DM Sans",Arial,sans-serif}
+    header{height:120px;background:#101827;display:flex;align-items:center;padding:0 clamp(1.5rem,5vw,6rem)}
+    header img{width:84px;height:84px;object-fit:contain;background:#fff}
+    main{min-height:calc(100vh - 120px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:5rem;padding:clamp(3rem,8vw,8rem)}
+    .number{margin:0;color:#dedede;font-family:"DM Serif Display",Georgia,serif;font-size:clamp(11rem,25vw,26rem);font-weight:400;line-height:.7;letter-spacing:-.07em}
+    .label{margin:0 0 1.5rem;color:#999;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase}
+    h1{margin:0 0 1.5rem;font-family:"DM Serif Display",Georgia,serif;font-size:clamp(3.5rem,7vw,7rem);font-weight:400;line-height:.9}
+    h1 em{color:#999;font-weight:400}
+    p{max-width:520px;margin:0 0 2.5rem;color:#666;font-size:1.1rem;line-height:1.7}
+    a{display:inline-block;background:#101827;color:#fff;padding:1rem 1.6rem;text-decoration:none;font-weight:500;transition:transform .2s ease}
+    a:hover{transform:translateY(-3px)}
+    @media(max-width:800px){header{height:88px}header img{width:58px;height:58px}main{min-height:calc(100vh - 88px);grid-template-columns:1fr;gap:3rem;padding:4rem 1.5rem}.number{font-size:clamp(10rem,55vw,17rem)}}
+    @media(prefers-reduced-motion:reduce){a{transition:none}}
+  </style>
+</head>
+<body>
+  <header><a href="/" aria-label="Fadel Moussa portfolio"><img src="/fadel-logo.webp" width="128" height="128" alt="Fadel Web logo" /></a></header>
+  <main>
+    <p class="number" aria-hidden="true">404</p>
+    <section>
+      <p class="label">Page not found</p>
+      <h1>Lost in the<br /><em>wrong place.</em></h1>
+      <p>The page you are looking for does not exist or may have been moved.</p>
+      <a href="/">Back to portfolio →</a>
+    </section>
+  </main>
+</body>
+</html>
