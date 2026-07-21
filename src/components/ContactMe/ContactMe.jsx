@@ -55,7 +55,7 @@ const ContactLinks = ({ variant }) => {
 
       </nav>
 
-      <p className="cm-copy">© {new Date().getFullYear()} Fadel Moussa. All rights reserved.</p>
+      <p className="cm-copy">© {new Date().getFullYear()} Fadel Moussa. All rights reserved. <a className="cm-privacy-link" href="/privacy.html">Privacy Policy</a></p>
     </div>
   );
 };
@@ -275,7 +275,6 @@ const ContactMe = () => {
                 <p className="cm-error" role="alert">{errorMessage}</p>
               )}
             </div>
-
           </form>
 
           <ContactLinks variant="mobile" />

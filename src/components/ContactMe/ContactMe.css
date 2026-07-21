@@ -440,3 +440,14 @@
   opacity: 0;
   pointer-events: none;
 }
+
+
+.cm-privacy-link {
+  margin-left: 0.45rem;
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+.cm-privacy-link:hover {
+  color: var(--cm-ink);
+}

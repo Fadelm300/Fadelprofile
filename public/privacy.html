@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Privacy Policy for Fadel Moussa's portfolio and contact form." />
+  <title>Privacy Policy | Fadel Moussa</title>
+  <style>
+    @font-face { font-family: "DM Sans"; src: url("/fonts/dm-sans-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+    @font-face { font-family: "DM Sans"; src: url("/fonts/dm-sans-500.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+    @font-face { font-family: "DM Serif Display"; src: url("/fonts/dm-serif-400.woff2") format("woff2"); font-style: normal; font-display: swap; }
+    @font-face { font-family: "DM Serif Display"; src: url("/fonts/dm-serif-italic-400.woff2") format("woff2"); font-style: italic; font-display: swap; }
+
+    :root { --ink: #101827; --text: #292929; --muted: #888; --line: #dedede; --paper: #fbfbfa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--text); font-family: "DM Sans", Arial, sans-serif; }
+
+    .site-header { background: var(--ink); color: #fff; }
+    .nav { width: min(1800px, calc(100% - 6rem)); min-height: 120px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .brand img { display: block; width: 84px; height: 84px; object-fit: contain; background: #fff; }
+    .nav a { color: #fff; text-decoration: none; font-size: 1rem; }
+    .nav a:hover { color: #bae6fd; }
+    .back-link { padding-bottom: 4px; border-bottom: 1px solid rgba(255,255,255,.45); }
+
+    main { width: min(1500px, calc(100% - 6rem)); margin: auto; }
+    .hero { min-height: 570px; padding: 8rem 0 6rem; display: grid; grid-template-columns: 1.05fr .95fr; align-items: end; gap: 7rem; border-bottom: 1px solid var(--line); }
+    .eyebrow { margin: 0 0 2rem; color: #999; font-size: .8rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; }
+    h1 { margin: 0; color: #090909; font-family: "DM Serif Display", Georgia, serif; font-size: clamp(5rem, 10vw, 9.5rem); font-weight: 400; line-height: .8; letter-spacing: -.035em; }
+    h1 em { color: #999; font-weight: 400; }
+    .hero-copy { max-width: 540px; margin: 0 0 .5rem; color: #666; font-size: clamp(1.15rem, 2vw, 1.55rem); line-height: 1.65; }
+
+    .policy { padding: 7rem 0 9rem; display: grid; grid-template-columns: 330px 1fr; gap: clamp(4rem, 9vw, 10rem); }
+    .summary { align-self: start; position: sticky; top: 2rem; }
+    .summary-label { margin: 0 0 1.2rem; color: #999; font-size: .75rem; letter-spacing: .16em; text-transform: uppercase; }
+    .summary h2 { margin: 0 0 1.5rem; color: #111; font-family: "DM Serif Display", Georgia, serif; font-size: 2.25rem; font-weight: 400; line-height: 1.1; }
+    .summary p { margin: 0 0 2rem; color: #777; line-height: 1.75; }
+    .summary-meta { padding-top: 1.5rem; border-top: 1px solid var(--line); }
+    .summary-meta span { display: block; margin-bottom: .4rem; color: #999; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; }
+    .summary-meta a { color: #111; text-underline-offset: 4px; }
+
+    .policy-section { display: grid; grid-template-columns: 65px 1fr; gap: 1.5rem; padding: 0 0 3rem; margin-bottom: 3rem; border-bottom: 1px solid var(--line); }
+    .number { color: #aaa; font-family: "DM Serif Display", Georgia, serif; font-size: 1.15rem; }
+    .policy-section h2 { margin: 0 0 1rem; color: #111; font-family: "DM Serif Display", Georgia, serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; }
+    .policy-section p { max-width: 780px; margin: 0; color: #666; font-size: 1.05rem; line-height: 1.8; }
+    .policy-section a { color: #111; text-underline-offset: 4px; }
+
+    footer { padding: 2rem 3rem; background: var(--ink); color: rgba(255,255,255,.65); display: flex; justify-content: space-between; gap: 2rem; font-size: .8rem; }
+    footer a { color: #fff; text-decoration: none; }
+
+    @media (max-width: 850px) {
+      .nav, main { width: min(100% - 2rem, 700px); }
+      .nav { min-height: 88px; }
+      .brand img { width: 58px; height: 58px; }
+      .hero { min-height: auto; padding: 6rem 0 4rem; grid-template-columns: 1fr; gap: 3.5rem; }
+      h1 { font-size: clamp(4.7rem, 23vw, 8rem); }
+      .policy { padding: 5rem 0 6rem; grid-template-columns: 1fr; gap: 5rem; }
+      .summary { position: static; }
+    }
+
+    @media (max-width: 520px) {
+      footer { padding: 1.5rem 1rem; flex-direction: column; }
+      .policy-section { grid-template-columns: 1fr; gap: .8rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Privacy navigation">
+      <a class="brand" href="/" aria-label="Fadel Moussa home"><img src="/fadel-logo.webp" width="128" height="128" alt="Fadel Web logo" /></a>
+      <a class="back-link" href="/">Back to portfolio ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Legal · Privacy</p>
+        <h1>Privacy<br /><em>Policy.</em></h1>
+      </div>
+      <p class="hero-copy">A clear explanation of what happens to the information you send through my portfolio contact form.</p>
+    </section>
+
+    <section class="policy">
+      <aside class="summary">
+        <p class="summary-label">The short version</p>
+        <h2>Your message is used only to reply.</h2>
+        <p>No contact-form database, advertising profile, or mailing list is created.</p>
+        <div class="summary-meta">
+          <span>Effective date</span>
+          <p>21 July 2026</p>
+          <span>Privacy contact</span>
+          <a href="mailto:fadel.m200@gmail.com">fadel.m200@gmail.com</a>
+        </div>
+      </aside>
+
+      <div>
+        <article class="policy-section">
+          <span class="number">01</span>
+          <div><h2>Information collected</h2><p>The form collects your name, email address, optional phone number, and message. An IP address may be processed temporarily to limit spam and repeated submissions.</p></div>
+        </article>
+
+        <article class="policy-section">
+          <span class="number">02</span>
+          <div><h2>How it is used</h2><p>Your information is used only to receive and respond to your inquiry. It is not used for advertising, profiling, newsletters, or unrelated marketing.</p></div>
+        </article>
+
+        <article class="policy-section">
+          <span class="number">03</span>
+          <div><h2>Delivery and storage</h2><p>The website does not save submissions in a dedicated database. The backend is hosted by Vercel, and Brevo delivers the message to my email inbox. The email may remain there until it is no longer needed.</p></div>
+        </article>
+
+        <article class="policy-section">
+          <span class="number">04</span>
+          <div><h2>Sharing</h2><p>Your personal information is not sold. It is processed only by the service providers needed to host the website and deliver your message.</p></div>
+        </article>
+
+        <article class="policy-section">
+          <span class="number">05</span>
+          <div><h2>Cookies</h2><p>This site does not currently use advertising or analytics cookies.</p></div>
+        </article>
+
+        <article class="policy-section">
+          <span class="number">06</span>
+          <div><h2>Security and choices</h2><p>The form uses HTTPS, validation, spam controls, and request limits. You may ask about, correct, or request deletion of information you submitted by emailing <a href="mailto:fadel.m200@gmail.com">fadel.m200@gmail.com</a>.</p></div>
+        </article>
+
+        <article class="policy-section">
+          <span class="number">07</span>
+          <div><h2>External links and updates</h2><p>GitHub, LinkedIn, and other external websites apply their own privacy policies. This page may be updated when the portfolio or its services change.</p></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Fadel Moussa. All rights reserved.</span>
+    <a href="/">Fadel Moussa · Portfolio ↗</a>
+  </footer>
+</body>
+</html>
