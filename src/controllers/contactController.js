@@ -18,7 +18,7 @@ export const sendContactMessage = async (data) => {
     try {
       result = await res.json();
       // console.log("📦 Parsed Response JSON:", result);
-    } catch (jsonError) {
+    } catch {
       // console.error("⚠️ Failed to parse JSON response:", jsonError);
       throw new Error("Invalid JSON response from server");
     }

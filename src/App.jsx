@@ -1,13 +1,12 @@
-import { useState } from 'react'
+
 
 import './App.css'
 import NavBar from './components/NavBar/NavBar.jsx';
 import About from './components/About/About.jsx';
 import Skills from './components/Skills/Skills.jsx';
-import MainContent from './components/MainContent/MainContent.jsx';
 import Projects from './components/Projects/Projects.jsx';
 import Education from './components/Education/Education.jsx';
-import ContactMe from './components/ContactMe /ContactMe.jsx';
+import ContactMe from './components/ContactMe/ContactMe.jsx';
 function App() {
 
   return (

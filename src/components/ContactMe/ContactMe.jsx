@@ -121,7 +121,7 @@ const ContactMe = () => {
         setStatus("error");
         setErrorMessage(response.error || "Something went wrong.");
       }
-    } catch (err) {
+    } catch {
       setStatus("error");
       setErrorMessage("Unexpected error occurred.");
     }
