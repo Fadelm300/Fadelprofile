@@ -55,10 +55,12 @@ const ContactLinks = ({ variant }) => {
 
       </nav>
 
-      <p className="cm-copy">© 2025 Fadel Moussa. All rights reserved.</p>
+      <p className="cm-copy">© {new Date().getFullYear()} Fadel Moussa. All rights reserved.</p>
     </div>
   );
 };
+
+const MESSAGE_LINK_PATTERN = /\b(?:https?:\/\/|www\.|(?:[a-z0-9-]+\.)+(?:com|net|org|io|app|dev|xyz|info|biz|me|co)(?:\/|\b))/iu;
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -66,6 +68,7 @@ const ContactMe = () => {
     email: "",
     phone: "",
     message: "",
+    website: "",
   });
   const [status, setStatus]             = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
@@ -104,11 +107,23 @@ const ContactMe = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((current) => ({ ...current, [name]: value }));
+
+    if (status !== "loading") {
+      setStatus(null);
+      setErrorMessage("");
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (MESSAGE_LINK_PATTERN.test(`${formData.name} ${formData.message}`)) {
+      setStatus("error");
+      setErrorMessage("Links are not allowed in the name or message.");
+      return;
+    }
+
     setStatus("loading");
     setErrorMessage("");
 
@@ -116,7 +131,7 @@ const ContactMe = () => {
       const response = await sendContactMessage(formData);
       if (response.success) {
         setStatus("success");
-        setFormData({ name: "", email: "", phone: "", message: "" });
+        setFormData({ name: "", email: "", phone: "", message: "", website: "" });
       } else {
         setStatus("error");
         setErrorMessage(response.error || "Something went wrong.");
@@ -164,7 +179,11 @@ const ContactMe = () => {
 
         {/* ── Right ── */}
         <div className="cm-right">
-          <form className="cm-form" onSubmit={handleSubmit} noValidate>
+          <form className="cm-form" onSubmit={handleSubmit}>
+            <div className="cm-honeypot" aria-hidden="true">
+              <label htmlFor="cm-website">Website</label>
+              <input id="cm-website" type="text" name="website" value={formData.website} onChange={handleChange} tabIndex={-1} autoComplete="off" />
+            </div>
 
             <div className="cm-reveal cm-field" style={{ "--d": "100ms" }}>
               <label htmlFor="cm-name">Full Name</label>
@@ -175,6 +194,8 @@ const ContactMe = () => {
                 placeholder="Your name"
                 value={formData.name}
                 onChange={handleChange}
+                minLength={2}
+                maxLength={80}
                 required
               />
             </div>
@@ -188,6 +209,7 @@ const ContactMe = () => {
                 placeholder="your@email.com"
                 value={formData.email}
                 onChange={handleChange}
+                maxLength={254}
                 required
               />
             </div>
@@ -203,6 +225,10 @@ const ContactMe = () => {
                 placeholder="+973 00 000 000"
                 value={formData.phone}
                 onChange={handleChange}
+                minLength={5}
+                maxLength={25}
+                pattern="[+0-9 ().-]*"
+                title="Use numbers, spaces, parentheses, dots, plus signs, or hyphens only."
               />
             </div>
 
@@ -214,6 +240,8 @@ const ContactMe = () => {
                 placeholder="Tell me about your project…"
                 value={formData.message}
                 onChange={handleChange}
+                minLength={10}
+                maxLength={2000}
                 required
               />
             </div>

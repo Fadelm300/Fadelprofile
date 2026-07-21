@@ -429,3 +429,14 @@
     transition: none !important;
   }
 }
+
+/* Hidden anti-spam field */
+.cm-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
