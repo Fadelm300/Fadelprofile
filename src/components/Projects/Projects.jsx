@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import "./Projects.css";
-import pharmacyImg from "../../assets/Projectsimg/pharmacy.png";
-import uniclubImg from "../../assets/Projectsimg/uni1.png";
-import quizAppImg from "../../assets/Projectsimg/quizapp.png";
-import carsBlog from "../../assets/Projectsimg/carsBlog.png";
-import xoaiImg from "../../assets/Projectsimg/xo-AI.png";
-import cardMatchImg from "../../assets/Projectsimg/cardmatch.png";
-import EmployeeManagementSystem from "../../assets/Projectsimg/EM_img.png";
-import insightBoardImg from "../../assets/Projectsimg/insightboard.png";
+import pharmacyImg from "../../assets/Projectsimg/pharmacy.webp";
+import uniclubImg from "../../assets/Projectsimg/uni1.webp";
+import quizAppImg from "../../assets/Projectsimg/quizapp.webp";
+import carsBlog from "../../assets/Projectsimg/carsBlog.webp";
+import xoaiImg from "../../assets/Projectsimg/xo-AI.webp";
+import cardMatchImg from "../../assets/Projectsimg/cardmatch.webp";
+import EmployeeManagementSystem from "../../assets/Projectsimg/EM_img.webp";
+import insightBoardImg from "../../assets/Projectsimg/insightboard.webp";
 
 const projects = [
   {

@@ -3,7 +3,7 @@ import "./ContactMe.css";
 import { sendContactMessage } from "../../controllers/contactController";
 import linkedinIcon from "../../assets/icons/linkedin.png";
 import githubIcon from "../../assets/icons/github.png";
-import communicationIcon from "../../assets/icons/communication.png";
+import communicationIcon from "../../assets/icons/communication.webp";
 
 
 const ContactLinks = ({ variant }) => {

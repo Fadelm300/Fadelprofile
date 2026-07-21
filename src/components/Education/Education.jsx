@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./Education.css";
 import gaLogo from "../../assets/EducationIcons/General_Assembly_Logo.png";
-import uobLogo from "../../assets/EducationIcons/University_of_Bahrain_logo.png";
+import uobLogo from "../../assets/EducationIcons/University_of_Bahrain_logo.webp";
 
 const entries = [
   {
