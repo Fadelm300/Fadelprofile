@@ -21,7 +21,7 @@ const ContactLinks = ({ variant }) => {
           className="cm-link cm-link--stagger-1"
         >
           <span className="cm-link-icon">
-            <img src={communicationIcon} alt="" aria-hidden="true" />
+            <img src={communicationIcon} alt="" width={64} height={64} loading="lazy" decoding="async" aria-hidden="true" />
           </span>
           <span className="cm-link-label">fadel.m200@gmail.com</span>
           <span className="cm-link-arrow" aria-hidden="true">↗</span>
@@ -34,7 +34,7 @@ const ContactLinks = ({ variant }) => {
           rel="noopener noreferrer"
         >
           <span className="cm-link-icon">
-            <img src={linkedinIcon} alt="" aria-hidden="true" />
+            <img src={linkedinIcon} alt="" width={32} height={33} loading="lazy" decoding="async" aria-hidden="true" />
           </span>
           <span className="cm-link-label">LinkedIn</span>
           <span className="cm-link-arrow" aria-hidden="true">↗</span>
@@ -47,7 +47,7 @@ const ContactLinks = ({ variant }) => {
           rel="noopener noreferrer"
         >
           <span className="cm-link-icon">
-            <img src={githubIcon} alt="" aria-hidden="true" />
+            <img src={githubIcon} alt="" width={32} height={33} loading="lazy" decoding="async" aria-hidden="true" />
           </span>
           <span className="cm-link-label">GitHub</span>
           <span className="cm-link-arrow" aria-hidden="true">↗</span>

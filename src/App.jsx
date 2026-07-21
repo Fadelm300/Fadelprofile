@@ -11,33 +11,34 @@ function App() {
 
   return (
     <>
-    <NavBar />
+      <NavBar />
 
-    {/* <MainContent /> */}
-   <section id="about">
-        <About />
-      </section>
+      {/* <MainContent /> */}
+      <main>
+        <section id="about">
+          <About />
+        </section>
 
-      <section id="skills">
-        <Skills />
-      </section>
-
-
-       <section id="projects">
-        <Projects />
-      </section>
-
- <section id="education">
-        <Education />
-      </section>
+        <section id="skills">
+          <Skills />
+        </section>
 
 
-      <section id="contactme">
-        <ContactMe />
-      </section>
+        <section id="projects">
+          <Projects />
+        </section>
 
+        <section id="education">
+          <Education />
+        </section>
+
+
+        <section id="contactme">
+          <ContactMe />
+        </section>
+      </main>
     </>
-  )
+  );
 }
 
 export default App

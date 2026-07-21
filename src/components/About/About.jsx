@@ -107,11 +107,8 @@ const About = () => {
             style={{ "--d": "180ms" }}
           >
             <div className="mc-img-frame">
-              <img
-                src={rightImage}
-                alt="Fadel M. Moussa"
-                className="mc-img"
-              />
+                  <img
+              src={rightImage} alt="Fadel M. Moussa" className="mc-img"  width={480}   height={617} decoding="async"fetchPriority="high"/>
 
               <div className="mc-badge" aria-hidden="true">
                 <span className="mc-badge-dot" />

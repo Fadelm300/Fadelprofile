@@ -185,11 +185,14 @@ const Skills = () => {
                     className="sk-reveal sk-chip"
                     style={{ "--d": `${260 + ci * 110 + si * 45}ms` }}
                   >
-                    <img
-                      src={skill.img}
-                      alt={skill.name}
-                      className="sk-chip-icon"
-                    />
+                    <img 
+                    src={skill.img} 
+                    alt="" 
+                    className="sk-chip-icon" 
+                    width={64} height={64} 
+                    loading="lazy" 
+                    decoding="async"
+                    aria-hidden="true" />
                     <span className="sk-chip-name">{skill.name}</span>
                   </div>
                 ))}

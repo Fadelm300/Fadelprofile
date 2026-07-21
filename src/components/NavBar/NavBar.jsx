@@ -22,7 +22,8 @@ const NavBar = () => {
       <nav className="navbar container-nav">
         <div className="brand">
           {logoSrc ? (
-            <img src={logoSrc} alt="Fadel Web logo" className="logo" />
+           <img
+  src={logoSrc}  alt="Fadel Web logo"className="logo"width="128"height="128"decoding="async"/>
           ) : (
             <div className="logo-text">Fadel<span className="logo-accent">Web</span></div>
           )}
@@ -56,8 +57,8 @@ const NavBar = () => {
               className="btn-icon-link btn-github"
               aria-label="GitHub"
             >
-              <img src={githubIcon} alt="GitHub" className="btn-icon" />
-            </a>
+          <img   src={githubIcon} alt="" className="btn-icon" width="32" height="33" decoding="async" aria-hidden="true"/>     
+         </a>
             <a
               href="https://www.linkedin.com/in/fadel-mohammad-b70662151"
               target="_blank"
@@ -65,7 +66,15 @@ const NavBar = () => {
               className="btn-icon-link btn-linkedin"
               aria-label="LinkedIn"
             >
-              <img src={linkedinIcon} alt="LinkedIn" className="btn-icon" />
+              <img
+  src={linkedinIcon}
+  alt=""
+  className="btn-icon"
+  width="32"
+  height="33"
+  decoding="async"
+  aria-hidden="true"
+/>
             </a>
           </div>
         </div>

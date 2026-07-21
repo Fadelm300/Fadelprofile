@@ -8,7 +8,16 @@ import xoaiImg from "../../assets/Projectsimg/xo-AI.webp";
 import cardMatchImg from "../../assets/Projectsimg/cardmatch.webp";
 import EmployeeManagementSystem from "../../assets/Projectsimg/EM_img.webp";
 import insightBoardImg from "../../assets/Projectsimg/insightboard.webp";
-
+const projectImageDimensions = {
+  [pharmacyImg]: { width: 600, height: 900 },
+  [uniclubImg]: { width: 600, height: 813 },
+  [quizAppImg]: { width: 600, height: 600 },
+  [carsBlog]: { width: 600, height: 900 },
+  [xoaiImg]: { width: 600, height: 600 },
+  [cardMatchImg]: { width: 600, height: 600 },
+  [EmployeeManagementSystem]: { width: 600, height: 600 },
+  [insightBoardImg]: { width: 600, height: 750 },
+};
 const projects = [
   {
     name: "UniClub",
@@ -127,11 +136,13 @@ const Projects = () => {
             >
               {/* Portrait image */}
               <div className="prj-img-wrap">
-                <img
-                  src={project.img}
-                  alt={project.name}
-                  className="prj-img"
-                />
+                <img src={project.img}
+                 alt={`${project.name} project preview`}
+                 className="prj-img"
+                 width={projectImageDimensions[project.img].width} 
+                 height={projectImageDimensions[project.img].height}
+                 loading="lazy" 
+                 decoding="async" />
                 {/* Hover overlay */}
                 <div className="prj-overlay" aria-hidden="true">
                   <span className="prj-cta">View on GitHub →</span>

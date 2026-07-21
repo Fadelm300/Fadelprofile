@@ -2,6 +2,10 @@ import React, { useEffect, useRef } from "react";
 import "./Education.css";
 import gaLogo from "../../assets/EducationIcons/General_Assembly_Logo.png";
 import uobLogo from "../../assets/EducationIcons/University_of_Bahrain_logo.webp";
+const educationLogoDimensions = {
+  [gaLogo]: { width: 439, height: 147 },
+  [uobLogo]: { width: 300, height: 361 },
+};
 
 const entries = [
   {
@@ -93,10 +97,13 @@ const Education = () => {
               {/* Logo */}
               <div className="edu-logo-wrap">
                 <img
-                  src={item.logo}
-                  alt={item.alt}
-                  className="edu-logo"
-                />
+                 src={item.logo} 
+                alt={item.alt} 
+                className="edu-logo"
+                 width={educationLogoDimensions[item.logo].width}
+                 height={educationLogoDimensions[item.logo].height} 
+                loading="lazy" 
+                decoding="async" />
               </div>
 
               {/* Content */}
