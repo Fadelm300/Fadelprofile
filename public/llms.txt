@@ -1,0 +1,20 @@
+# Fadel Moussa
+
+> Official portfolio of Fadel Moussa, a full-stack developer showcasing software projects, technical skills, education, and contact information.
+
+## Main sections
+
+- [About Fadel Moussa](https://fadelprofile.vercel.app/#about): Professional introduction and profile.
+- [Technical Skills](https://fadelprofile.vercel.app/#skills): Programming languages, frameworks, cloud platforms, and development tools.
+- [Projects](https://fadelprofile.vercel.app/#projects): Selected software and web development projects.
+- [Education](https://fadelprofile.vercel.app/#education): Education and professional training.
+- [Contact](https://fadelprofile.vercel.app/#contactme): Official contact and professional profiles.
+
+## Official profiles
+
+- [GitHub](https://github.com/Fadelm300)
+- [LinkedIn](https://www.linkedin.com/in/fadel-mohammad-b70662151)
+
+## Contact
+
+- Email: fadel.m200@gmail.com
