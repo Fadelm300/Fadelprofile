@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./About.css";
-import rightImage from "../../assets/ST3_4992 copy.jpg";
+import rightImage from "../../assets/ST3_4992 copy.webp";
 
 const About = () => {
   const sectionRef = useRef(null);
@@ -107,11 +107,8 @@ const About = () => {
             style={{ "--d": "180ms" }}
           >
             <div className="mc-img-frame">
-              <img
-                src={rightImage}
-                alt="Fadel M. Moussa"
-                className="mc-img"
-              />
+                  <img
+              src={rightImage} alt="Fadel M. Moussa" className="mc-img"  width={480}   height={617} decoding="async"fetchPriority="high"/>
 
               <div className="mc-badge" aria-hidden="true">
                 <span className="mc-badge-dot" />

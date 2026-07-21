@@ -10,7 +10,7 @@ import css from "../../assets/skillsIcons/css3.png";
 import bootstrap from "../../assets/skillsIcons/bootstrap.png";
 import tailwind from "../../assets/skillsIcons/tailwind.png";
 import node from "../../assets/skillsIcons/node2.png";
-import php from "../../assets/skillsIcons/PHP.png";
+import php from "../../assets/skillsIcons/PHP.webp";
 import python from "../../assets/skillsIcons/python.png";
 import express from "../../assets/skillsIcons/express.png";
 import django from "../../assets/skillsIcons/django.png";
@@ -22,17 +22,17 @@ import googlecloud from "../../assets/skillsIcons/googlecloud.png";
 import mongodb from "../../assets/skillsIcons/mongodb.png";
 import heroku from "../../assets/skillsIcons/heroku.png";
 import unity from "../../assets/skillsIcons/unity.png";
-import postman from "../../assets/skillsIcons/postman.png";
+import postman from "../../assets/skillsIcons/postman.webp";
 import github from "../../assets/skillsIcons/github.png";
-import figma from "../../assets/skillsIcons/figma.png";
+import figma from "../../assets/skillsIcons/figma.webp";
 import trello from "../../assets/skillsIcons/trello.png";
-import xampp from "../../assets/skillsIcons/xampp.png";
+import xampp from "../../assets/skillsIcons/xampp.webp";
 import phpmyadmin from "../../assets/skillsIcons/phpmyadmin.png";
 import ubuntu from "../../assets/skillsIcons/ubuntu.png";
 import linux from "../../assets/skillsIcons/linux.png";
-import vscode from "../../assets/skillsIcons/vscode.png";
-import androidstudio from "../../assets/skillsIcons/androidstudio.png";
-import typescript from "../../assets/skillsIcons/typescript.png";
+import vscode from "../../assets/skillsIcons/vscode.webp";
+import androidstudio from "../../assets/skillsIcons/androidstudio.webp";
+import typescript from "../../assets/skillsIcons/typescript.webp";
 const skillCategories = [
   {
     title: "Front-End Development",
@@ -185,11 +185,14 @@ const Skills = () => {
                     className="sk-reveal sk-chip"
                     style={{ "--d": `${260 + ci * 110 + si * 45}ms` }}
                   >
-                    <img
-                      src={skill.img}
-                      alt={skill.name}
-                      className="sk-chip-icon"
-                    />
+                    <img 
+                    src={skill.img} 
+                    alt="" 
+                    className="sk-chip-icon" 
+                    width={64} height={64} 
+                    loading="lazy" 
+                    decoding="async"
+                    aria-hidden="true" />
                     <span className="sk-chip-name">{skill.name}</span>
                   </div>
                 ))}

@@ -1,0 +1,41 @@
+# Fadel Moussa
+
+> Official portfolio of Fadel Moussa, a full-stack developer showcasing software projects, technical skills, education, and contact information.
+
+## About
+
+Fadel Moussa is a full-stack developer experienced in building web applications, backend services, APIs, and cloud-based projects.
+
+## Name variants
+
+- Fadel Moussa
+- Fadel M. Moussa
+- Fadel Mohammad Fadel
+- Fadel Mohammad Mosa
+- Fadel Mohammad Moussa
+- Fadel Mousa
+- فاضل محمد فاضل
+- فاضل محمد موسى
+- فاضل موسى
+
+## Main sections
+
+- [About Fadel Moussa](https://fadelprofile.vercel.app/#about): Professional introduction and profile.
+- [Technical Skills](https://fadelprofile.vercel.app/#skills): Programming languages, frameworks, cloud platforms, and development tools.
+- [Projects](https://fadelprofile.vercel.app/#projects): Selected software and web development projects.
+- [Education](https://fadelprofile.vercel.app/#education): Education and professional training.
+- [Contact](https://fadelprofile.vercel.app/#contactme): Contact form and professional profiles.
+- [Privacy Policy](https://fadelprofile.vercel.app/privacy.html): Information about contact-form data handling.
+
+## Technologies
+
+React, JavaScript, TypeScript, Python, PHP, Node.js, Express, MongoDB, Firebase, AWS, Google Cloud, Git, and REST APIs.
+
+## Official profiles
+
+- [GitHub](https://github.com/Fadelm300)
+- [LinkedIn](https://www.linkedin.com/in/fadel-mohammad-b70662151)
+
+## Contact
+
+- Email: fadel.m200@gmail.com

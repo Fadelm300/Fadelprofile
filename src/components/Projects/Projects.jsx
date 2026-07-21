@@ -1,14 +1,23 @@
 import React, { useEffect, useRef } from "react";
 import "./Projects.css";
-import pharmacyImg from "../../assets/Projectsimg/pharmacy.png";
-import uniclubImg from "../../assets/Projectsimg/uni1.png";
-import quizAppImg from "../../assets/Projectsimg/quizapp.png";
-import carsBlog from "../../assets/Projectsimg/carsBlog.png";
-import xoaiImg from "../../assets/Projectsimg/xo-AI.png";
-import cardMatchImg from "../../assets/Projectsimg/cardmatch.png";
-import EmployeeManagementSystem from "../../assets/Projectsimg/EM_img.png";
-import insightBoardImg from "../../assets/Projectsimg/insightboard.png";
-
+import pharmacyImg from "../../assets/Projectsimg/pharmacy.webp";
+import uniclubImg from "../../assets/Projectsimg/uni1.webp";
+import quizAppImg from "../../assets/Projectsimg/quizapp.webp";
+import carsBlog from "../../assets/Projectsimg/carsBlog.webp";
+import xoaiImg from "../../assets/Projectsimg/xo-AI.webp";
+import cardMatchImg from "../../assets/Projectsimg/cardmatch.webp";
+import EmployeeManagementSystem from "../../assets/Projectsimg/EM_img.webp";
+import insightBoardImg from "../../assets/Projectsimg/insightboard.webp";
+const projectImageDimensions = {
+  [pharmacyImg]: { width: 600, height: 900 },
+  [uniclubImg]: { width: 600, height: 813 },
+  [quizAppImg]: { width: 600, height: 600 },
+  [carsBlog]: { width: 600, height: 900 },
+  [xoaiImg]: { width: 600, height: 600 },
+  [cardMatchImg]: { width: 600, height: 600 },
+  [EmployeeManagementSystem]: { width: 600, height: 600 },
+  [insightBoardImg]: { width: 600, height: 750 },
+};
 const projects = [
   {
     name: "UniClub",
@@ -127,11 +136,13 @@ const Projects = () => {
             >
               {/* Portrait image */}
               <div className="prj-img-wrap">
-                <img
-                  src={project.img}
-                  alt={project.name}
-                  className="prj-img"
-                />
+                <img src={project.img}
+                 alt={`${project.name} project preview`}
+                 className="prj-img"
+                 width={projectImageDimensions[project.img].width} 
+                 height={projectImageDimensions[project.img].height}
+                 loading="lazy" 
+                 decoding="async" />
                 {/* Hover overlay */}
                 <div className="prj-overlay" aria-hidden="true">
                   <span className="prj-cta">View on GitHub →</span>
