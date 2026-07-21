@@ -12,9 +12,29 @@ const NavBar = () => {
   const closeMenu  = () => setOpen(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    let frameId = null;
+
+    const updateScrolledState = () => {
+      setScrolled(window.scrollY > 20);
+      frameId = null;
+    };
+
+    const onScroll = () => {
+      if (frameId === null) {
+        frameId = window.requestAnimationFrame(updateScrolledState);
+      }
+    };
+
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+
+      if (frameId !== null) {
+        window.cancelAnimationFrame(frameId);
+      }
+    };
   }, []);
 
   return (
