@@ -1,0 +1,443 @@
+.nf-page {
+  --nf-white: #ffffff;
+  --nf-cream: #fbf7ef;
+  --nf-ink: #0d0d0d;
+  --nf-muted: #6f665c;
+  --nf-soft-muted: #8f8f8f;
+  --nf-line: #e6e0d8;
+  --nf-blue: #0284c7;
+  --nf-violet: #6366f1;
+
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 2.5rem;
+  color: var(--nf-ink);
+  background:
+    radial-gradient(circle at 88% 10%, rgba(99, 102, 241, 0.07), transparent 28%),
+    radial-gradient(circle at 8% 92%, rgba(2, 132, 199, 0.06), transparent 25%),
+    var(--nf-white);
+  font-family: "DM Sans", sans-serif;
+}
+
+.nf-page *,
+.nf-page *::before,
+.nf-page *::after {
+  box-sizing: border-box;
+}
+
+.nf-layout {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+  position: relative;
+  z-index: 1;
+}
+
+.nf-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nf-number-wrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.4rem;
+}
+
+.nf-number {
+  display: block;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(6rem, 11vw, 9rem);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.055em;
+  background: linear-gradient(135deg, var(--nf-blue), var(--nf-violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(5px 6px 0 rgba(13, 13, 13, 0.1));
+  user-select: none;
+  animation: nfFloat404 3s ease-in-out infinite;
+}
+
+.nf-sparks {
+  position: absolute;
+  top: 0.25rem;
+  right: -1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  animation: nfBlink 1.8s ease-in-out infinite;
+}
+
+.nf-sparks i {
+  display: block;
+  border-radius: 50%;
+  background: var(--nf-blue);
+}
+
+.nf-sparks i:nth-child(1) {
+  width: 5px;
+  height: 5px;
+}
+
+.nf-sparks i:nth-child(2) {
+  width: 4px;
+  height: 4px;
+  margin-left: 7px;
+}
+
+.nf-sparks i:nth-child(3) {
+  width: 6px;
+  height: 6px;
+  margin-left: 2px;
+  background: var(--nf-violet);
+}
+
+.nf-title {
+  margin: 0 0 1.25rem;
+  color: var(--nf-ink);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(2.15rem, 4vw, 3.45rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+.nf-title em {
+  color: var(--nf-soft-muted);
+  font-style: italic;
+}
+
+.nf-description {
+  max-width: 390px;
+  margin: 0 0 2.25rem;
+  color: var(--nf-muted);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.nf-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.nf-button {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  border: 1px solid var(--nf-ink);
+  border-radius: 2px;
+  padding: 0.9rem 1.35rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1),
+    box-shadow 0.3s,
+    color 0.3s,
+    background 0.3s,
+    border-color 0.3s;
+}
+
+.nf-button svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.nf-button-primary {
+  color: var(--nf-white);
+  background: var(--nf-ink);
+}
+
+.nf-button-primary:hover {
+  border-color: var(--nf-blue);
+  background: linear-gradient(135deg, var(--nf-blue), var(--nf-violet));
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(2, 132, 199, 0.22);
+}
+
+.nf-button-secondary {
+  color: var(--nf-ink);
+  background: transparent;
+  border-color: var(--nf-line);
+}
+
+.nf-button-secondary:hover {
+  border-color: var(--nf-ink);
+  background: var(--nf-cream);
+  transform: translateY(-3px);
+}
+
+.nf-button:focus-visible {
+  outline: 3px solid rgba(2, 132, 199, 0.2);
+  outline-offset: 4px;
+}
+
+.nf-route {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 2.5rem;
+  opacity: 0.75;
+}
+
+.nf-route svg:nth-child(1) {
+  width: 24px;
+  height: 24px;
+}
+
+.nf-route svg:nth-child(1) circle:first-child {
+  fill: none;
+  stroke: #cfc5b9;
+  stroke-width: 1.5;
+  stroke-dasharray: 3 3;
+}
+
+.nf-route svg:nth-child(1) circle:last-child {
+  fill: #e5ddd3;
+}
+
+.nf-route svg:nth-child(2) {
+  width: 28px;
+  height: 20px;
+}
+
+.nf-route svg:nth-child(2) path {
+  fill: var(--nf-blue);
+}
+
+.nf-route svg:nth-child(3) {
+  width: 44px;
+  height: 12px;
+}
+
+.nf-route svg:nth-child(3) path {
+  fill: none;
+  stroke: #cfc5b9;
+  stroke-width: 1.5;
+  stroke-dasharray: 3 2;
+}
+
+.nf-plane {
+  animation: nfGlide 5s ease-in-out infinite;
+}
+
+.nf-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.nf-illustration {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  animation: nfFloatScene 4s ease-in-out infinite;
+}
+
+.nf-pulse-x {
+  transform-origin: 319px 238px;
+  animation: nfPulseX 2s ease-in-out infinite;
+}
+
+.nf-zzz {
+  animation: nfZzz 2.5s ease-in-out infinite;
+}
+
+.nf-robot {
+  transform-origin: 446px 296px;
+  animation: nfBobHead 3s ease-in-out infinite;
+}
+
+.nf-clock-hands {
+  transform-origin: 470px 155px;
+  animation: nfSpinClock 4s linear infinite;
+}
+
+.nf-blob {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.nf-blob-one {
+  width: min(32vw, 430px);
+  aspect-ratio: 1;
+  top: -180px;
+  right: -80px;
+  background: rgba(99, 102, 241, 0.055);
+}
+
+.nf-blob-two {
+  width: min(22vw, 280px);
+  aspect-ratio: 1;
+  bottom: -100px;
+  left: -70px;
+  background: rgba(251, 247, 239, 0.95);
+}
+
+.nf-blob-three {
+  width: 110px;
+  aspect-ratio: 1;
+  top: 43%;
+  left: 6%;
+  background: rgba(2, 132, 199, 0.04);
+}
+
+@keyframes nfFloat404 {
+  0%,
+  100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes nfFloatScene {
+  0%,
+  100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes nfZzz {
+  0%,
+  100% { opacity: 0.3; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-7px); }
+}
+
+@keyframes nfBobHead {
+  0%,
+  100% { transform: rotate(0); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+@keyframes nfPulseX {
+  0%,
+  100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(0.96); }
+}
+
+@keyframes nfSpinClock {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes nfBlink {
+  0%,
+  100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.7); }
+}
+
+@keyframes nfGlide {
+  0%,
+  100% { transform: translate(0, 0) rotate(0); }
+  50% { transform: translate(8px, -5px) rotate(3deg); }
+}
+
+@media (max-width: 900px) {
+  .nf-page {
+    min-height: 100svh;
+    padding: 4.5rem 2rem;
+    overflow-y: auto;
+  }
+
+  .nf-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .nf-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .nf-description {
+    max-width: 470px;
+  }
+
+  .nf-actions {
+    justify-content: center;
+  }
+
+  .nf-art {
+    order: -1;
+  }
+
+  .nf-illustration {
+    max-width: 430px;
+  }
+}
+
+@media (max-width: 560px) {
+  .nf-page {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .nf-layout {
+    gap: 2rem;
+  }
+
+  .nf-art {
+    width: 100%;
+  }
+
+  .nf-illustration {
+    max-width: 340px;
+  }
+
+  .nf-number-wrap {
+    margin-bottom: 1rem;
+  }
+
+  .nf-title {
+    font-size: clamp(1.9rem, 9vw, 2.5rem);
+  }
+
+  .nf-description {
+    font-size: 0.92rem;
+  }
+
+  .nf-actions {
+    width: 100%;
+  }
+
+  .nf-button {
+    width: 100%;
+  }
+
+  .nf-route {
+    margin-top: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nf-page *,
+  .nf-page *::before,
+  .nf-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
