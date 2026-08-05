@@ -8,6 +8,7 @@ import xoaiImg from "../../assets/Projectsimg/xo-AI.webp";
 import cardMatchImg from "../../assets/Projectsimg/cardmatch.webp";
 import EmployeeManagementSystem from "../../assets/Projectsimg/EM_img.webp";
 import insightBoardImg from "../../assets/Projectsimg/insightboard.webp";
+import mahjongHandGameImg from "../../assets/Projectsimg/mahjong-hand-game.webp";
 const projectImageDimensions = {
   [pharmacyImg]: { width: 600, height: 900 },
   [uniclubImg]: { width: 600, height: 813 },
@@ -17,6 +18,7 @@ const projectImageDimensions = {
   [cardMatchImg]: { width: 600, height: 600 },
   [EmployeeManagementSystem]: { width: 600, height: 600 },
   [insightBoardImg]: { width: 600, height: 750 },
+  [mahjongHandGameImg]: { width: 600, height: 900 },
 };
 const projects = [
   {
@@ -35,6 +37,11 @@ const projects = [
     link: "https://github.com/Fadelm300/insightboard",
   },
   {
+    name: "Mahjong Hand Game",
+    img: mahjongHandGameImg,
+    link: "https://github.com/Fadelm300/mahjong-hand-betting-game",
+  },
+  {
     name: "Quiz App",
     img: quizAppImg,
     link: "https://github.com/HaroonAlnhdi/Quizz_App",
@@ -44,16 +51,17 @@ const projects = [
     img: carsBlog,
     link: "https://github.com/Fadelm300/Car-Blogs",
   },
-  {
-    name: "Card Match",
-    img: cardMatchImg,
-    link: "https://github.com/Fadelm300/Memory_cards_Game",
-  },
+  // {
+  //   name: "Card Match",
+  //   img: cardMatchImg,
+  //   link: "https://github.com/Fadelm300/Memory_cards_Game",
+  // },
   {
     name: "XO AI",
     img: xoaiImg,
     link: "https://github.com/Fadelm300/tic-tac-toe",
   },
+ 
   {
     name: "Pharmacy",
     img: pharmacyImg,
