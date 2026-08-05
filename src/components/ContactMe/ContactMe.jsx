@@ -237,7 +237,7 @@ const ContactMe = () => {
               <textarea
                 id="cm-message"
                 name="message"
-                placeholder="Tell me about your project…"
+                placeholder="How can I help you?"
                 value={formData.message}
                 onChange={handleChange}
                 minLength={10}
