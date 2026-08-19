@@ -148,13 +148,13 @@ const ContactMe = () => {
 
         {/* ── Left ── */}
         <div className="cm-left">
-          <span
-            className="cm-reveal cm-avail"
-            style={{ "--d": "0ms" }}
-          >
-            <span className="cm-avail-dot" aria-hidden="true" />
-            Open to opportunities
-          </span>
+                                        {/* <span
+                                          className="cm-reveal cm-avail"
+                                          style={{ "--d": "0ms" }}
+                                        >
+                                          <span className="cm-avail-dot" aria-hidden="true" />
+                                          Open to opportunities
+                                        </span> */}
 
           <h1
             className="cm-reveal cm-heading"
