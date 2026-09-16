@@ -33,6 +33,7 @@ import linux from "../../assets/skillsIcons/linux.png";
 import vscode from "../../assets/skillsIcons/vscode.webp";
 import androidstudio from "../../assets/skillsIcons/androidstudio.webp";
 import typescript from "../../assets/skillsIcons/typescript.webp";
+import vue from "../../assets/skillsIcons/vue.webp";
 const skillCategories = [
   {
     title: "Front-End Development",
@@ -43,6 +44,7 @@ const skillCategories = [
       { name: "TypeScript", img: typescript },
       { name: "Next.js",    img: nextjs },
       { name: "Angular", img: angular },
+      { name: "Vue.js", img: vue },
       { name: "HTML",       img: html },
       { name: "Flutter",    img: flutter },
       { name: "CSS",        img: css },

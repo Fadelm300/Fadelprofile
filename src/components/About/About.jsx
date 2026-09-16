@@ -65,7 +65,7 @@ const About = () => {
             style={{ "--d": "360ms" }}
           >
             <a
-              href="https://drive.google.com/file/d/12eT6MNavcNNy3lfzQgq7GZURjAzexDaA/view?usp=sharing"
+              href="https://drive.google.com/file/d/1xydNgUtxDu8l35tcW2p0aFrBroNAq1e8/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="mc-btn-primary"
